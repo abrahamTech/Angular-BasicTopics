@@ -1,0 +1,19 @@
+<br>
+<h2>Topic 3: Class BINDING (Buttons Component)</h2>
+<br>
+
+<div>
+    <button [class.disabled] = "button_dis" class="btn btn-danger" (click)="text_color = 'text-danger'">Red Color</button>
+    <button [class.disabled] = "button_dis" class="btn btn-success mx-3" (click)="text_color = 'text-success'">Green Color</button>
+    <button [class] = "{
+        'disabled': button_dis,
+        'btn': true,
+        'btn-primary': true 
+    }" (click)="text_color = 'text-primary'">Blue Color</button>
+</div>
+
+<p [class]="text_color">Text that will change color</p> 
+
+<button class="btn btn-secondary" (click)="buttons_disabled()">
+    Activar/Desactivar
+</button>
