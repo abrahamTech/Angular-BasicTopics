@@ -14,4 +14,12 @@ export class ContadorComponent {
     name: "Tom Cruise",
     age: 30
   }
+
+  number:number = 1;
+
+  numberDecrease() {
+    if(this.number>=1){
+      this.number--;
+    };
+  }
 }

@@ -1,7 +1,22 @@
-<h2>Contador Component</h2>
+<h2>Topic 1: Interpolation (Contador Component)</h2>
 <br>
 
 <p>My name is: {{name1}}</p>
 
 <p>User name: {{user.name}}</p>
 <p>User age: {{user.age}}</p>
+
+
+<br>
+<h2>Topic 2: Event BINDING (Contador Component)</h2>
+<br>
+
+<button (click)="numberDecrease()">
+    -
+</button>
+
+<span>{{number}}</span>
+
+<button (click)="number = number + 1">
+    +
+</button>
