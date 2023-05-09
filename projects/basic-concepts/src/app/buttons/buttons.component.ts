@@ -14,4 +14,10 @@ export class ButtonsComponent {
     this.button_dis = !this.button_dis;
     this.text_color = "";
   }
+
+  img_page: string = "https://images.pexels.com/photos/767172/pexels-photo-767172.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load";
+
+  changeToOriginal() {
+    this.img_page = "https://images.pexels.com/photos/767172/pexels-photo-767172.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load";
+  }
 }

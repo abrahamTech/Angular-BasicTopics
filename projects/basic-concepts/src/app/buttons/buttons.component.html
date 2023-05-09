@@ -17,3 +17,17 @@
 <button class="btn btn-secondary" (click)="buttons_disabled()">
     Activar/Desactivar
 </button>
+
+<br><br><br>
+<h2>Topic 4: Property BINDING (Buttons Component) </h2>
+<br>
+
+<div class="d-flex justify-content-center align-items-center mb-3">
+    <button class="btn btn-primary" (click)="img_page = 'https://images.pexels.com/photos/2603464/pexels-photo-2603464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">Image 1</button>
+    <button class="btn btn-secondary mx-3" (click)="changeToOriginal()">Original Image</button>
+    <button class="btn btn-danger" (click)="img_page='https://images.pexels.com/photos/4771595/pexels-photo-4771595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">Image 2</button>
+</div>
+
+<div class="h-200 d-flex justify-content-center align-items-center" style="height: 400px;">
+    <img [src]="img_page" class="h-75" alt="">
+</div>
