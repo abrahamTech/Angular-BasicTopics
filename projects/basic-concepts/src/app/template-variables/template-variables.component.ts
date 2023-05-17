@@ -7,11 +7,19 @@ import { Component } from '@angular/core';
 })
 export class TemplateVariablesComponent {
 
+  
   showInConsole(name:string) {
-
+    
     if(name){
       console.log(name)
     }
+  }
+  
+
+  openAlert:Boolean = false;
+
+  showAlert(){
+    this.openAlert = true;
   }
   
 }
