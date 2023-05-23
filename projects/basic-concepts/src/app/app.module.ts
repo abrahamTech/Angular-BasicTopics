@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { ContadorComponent } from './contador/contador.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { TemplateVariablesComponent } from './template-variables/template-variables.component';
+import { LoopsComponent } from './loops/loops.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContadorComponent,
     ButtonsComponent,
-    TemplateVariablesComponent
+    TemplateVariablesComponent,
+    LoopsComponent
   ],
   imports: [
     BrowserModule
