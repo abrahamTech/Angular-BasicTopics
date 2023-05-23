@@ -15,4 +15,6 @@ export class LoopsComponent {
     {name: "Harry", age: 12},
     {name: "Charles", age: 29}
   ];
+
+  day?: string;
 }
