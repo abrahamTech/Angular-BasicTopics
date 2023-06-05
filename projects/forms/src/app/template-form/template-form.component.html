@@ -1,1 +1,35 @@
-<p>template-form works!</p>
+<div class="card mb-4">
+    <div class="card-body">
+
+        <form (ngSubmit)="processForm()">
+
+            <div class="mb-2 text-info">
+                <label class="form-label">
+                    Name: 
+                </label>
+
+                <!-- To use (ngModule) we need to include a new module in "app.module.ts" file -->
+                <!-- We need to include a "name" -->
+                <input type="text" name="name" class="form-control" placeholder="Please enter your name" [(ngModel)]="person.name">
+            </div>
+
+            <div class="mb-2 text-primary">
+                <label class="form-label">
+                    Age:
+                </label>
+
+                <input type="number" name="age" class="form-control" placeholder="Please enter your age" [(ngModel)]="person.age">
+            </div>
+
+            <!-- Button that will send the info -->
+            <button class="btn btn-primary mt-2">
+                Send
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- The pipe (|) is put to say in what format I want to show the info -->
+{{ person | json}}
