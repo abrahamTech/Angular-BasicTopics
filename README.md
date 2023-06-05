@@ -26,6 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+
+# Bootstrap 5 Styles
+Write the next line code to the html file (index.html)
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
 # Template Forms
 Best when the forms are small
 All validations will go in the same template
@@ -33,14 +39,28 @@ All validations will go in the same template
 # Reactive Forms
 Validations will go in the Typescript file
 
-# Run Aplication and open in explorer
-ng serve -0
 
-## Generate File (First 1)
-ng new nombre-de-tu-workspace --create-application=false
+
+# Run Aplication and open in explorer
+ng serve -o
 
 # Generate Component
-ng g c component_name
+ng generate component component_name
+Ex: ng g c template-form
+
+ng generate component component-name --project=application-name
+Ex: ng g c template-form --project=forms
+
+
+
+## Generate File (First 1)
+ng new workspace-name --create-application=false
+Ex: ng new angular-basic-topics
 
 ## Generate Applications (Then 2)
-ng generate application nombre-de-tu-aplicacion
+ng generate application application-name
+Ex: ng generate application forms
+
+# Run Application (Next 3)
+ng serve application-name -o
+Ex: ng serve forms -o
