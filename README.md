@@ -26,9 +26,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# Template Forms
+Best when the forms are small
+All validations will go in the same template
 
-## Generate File
+# Reactive Forms
+Validations will go in the Typescript file
+
+# Run Aplication and open in explorer
+ng serve -0
+
+## Generate File (First 1)
 ng new nombre-de-tu-workspace --create-application=false
 
-## Generate Applications
+# Generate Component
+ng g c component_name
+
+## Generate Applications (Then 2)
 ng generate application nombre-de-tu-aplicacion
