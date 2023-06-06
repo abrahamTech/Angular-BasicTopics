@@ -1,4 +1,4 @@
-<div class="card mb-4">
+<div class="card mb-4" style="background-color: #222">
     <div class="card-body">
 
         <form (ngSubmit)="processForm()">
@@ -10,7 +10,13 @@
 
                 <!-- To use (ngModule) we need to include a new module in "app.module.ts" file -->
                 <!-- We need to include a "name" -->
-                <input type="text" name="name" class="form-control" placeholder="Please enter your name" [(ngModel)]="person.name">
+                <!-- #ageInput="ngModel" is to acces to the ng Validation Rules -->
+                <input type="text" name="name" class="form-control" placeholder="Please enter your name" [(ngModel)]="person.name" required #nameInput="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="nameInput.valid || nameInput.pristine">
+                    Name is required
+                </div>
+
             </div>
 
             <div class="mb-2 text-primary">
@@ -18,7 +24,11 @@
                     Age:
                 </label>
 
-                <input type="number" name="age" class="form-control" placeholder="Please enter your age" [(ngModel)]="person.age">
+                <input type="number" name="age" class="form-control" placeholder="Please enter your age" [(ngModel)]="person.age" required #ageInput="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="ageInput.valid || ageInput.pristine">
+                    Age is required
+                </div>
             </div>
 
             <!-- Button that will send the info -->
@@ -32,4 +42,16 @@
 </div>
 
 <!-- The pipe (|) is put to say in what format I want to show the info -->
-{{ person | json}}
+<h5>- Person Info: {{ person | json}} </h5> 
+
+<!-- #nameInput ? "required = null" : "required = true" -->
+<h5>- nameInput.errors: {{ nameInput.errors | json }}</h5> 
+
+<!-- #nameInput ? "true" : "false" -->
+<h5>- nameInput.valid: {{ nameInput.valid | json }}</h5>
+
+<!-- Validation Rules
+
+Write in the input ? ng-dirty : ng-pristine
+Touch the input ? ng-touched : ng-untouched
+Compliance with validation rules ? ng-valid : ng-invalid -->
