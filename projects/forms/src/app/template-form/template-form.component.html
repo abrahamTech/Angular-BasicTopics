@@ -1,7 +1,7 @@
 <div class="card mb-4" style="background-color: #222">
     <div class="card-body">
 
-        <form (ngSubmit)="processForm()">
+        <form (ngSubmit)="processForm()" #formContact="ngForm">
 
             <div class="mb-2 text-info">
                 <label class="form-label">
@@ -32,7 +32,7 @@
             </div>
 
             <!-- Button that will send the info -->
-            <button class="btn btn-primary mt-2">
+            <button class="btn btn-primary mt-2" [disabled]="formContact.invalid">
                 Send
             </button>
 
@@ -49,6 +49,12 @@
 
 <!-- #nameInput ? "true" : "false" -->
 <h5>- nameInput.valid: {{ nameInput.valid | json }}</h5>
+
+<!-- #nameInput ? "true" : "false" -->
+<h5>- nameInput.pristine: {{ nameInput.pristine | json }}</h5>
+
+<!-- #formContact ? "true" : "false" -->
+<h5>- formContact.valid: {{ formContact.valid | json }}</h5>
 
 <!-- Validation Rules
 
