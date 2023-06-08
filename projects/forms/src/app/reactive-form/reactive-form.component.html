@@ -7,6 +7,10 @@
                 </label>
                 
                 <input type="text" [formControl]="name" class="form-control" placeholder="Please enter your name">
+
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                    Name is mandatory
+                </div>
             </div>
             
             <div class="mb-2">
@@ -15,6 +19,17 @@
                 </label>
                 
                 <input type="email" [formControl]="email" class="form-control" placeholder="Please enter your email">
+
+                <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                    <!-- With the ?. We check in the array (email.errors) if exist an index named like this or not ['example'] -->
+                    <span *ngIf="email.errors?.['required']">
+                        Email is mandatory
+                    </span>
+                    
+                    <span *ngIf="email.errors?.['email']">
+                        Invalid email
+                    </span>
+                </div>
             </div>
 
             <button class="btn btn-primary mt-2">
@@ -27,3 +42,5 @@
 <p>Name Value: {{name.value}}</p>
 <br>
 <p>Email Value: {{email.value}}</p>
+<br>
+<p>Email Validations: {{email.errors | json}}</p>

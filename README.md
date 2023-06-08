@@ -64,3 +64,9 @@ Ex: ng generate application forms
 # Run Application (Next 3)
 ng serve application-name -o
 Ex: ng serve forms -o
+
+
+# Template Forms vs REactive Forms
+
+T - Input from HTML File -> required
+R - Variable from TS File -> ("", Validators.required)
