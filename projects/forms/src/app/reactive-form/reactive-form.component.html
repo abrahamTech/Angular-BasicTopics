@@ -1,0 +1,29 @@
+<div class="card" style="background-color: #222;">
+    <div class="card-body">
+        <form>
+            <div class="mb-2">
+                <label for="" class="form-label text-info">
+                    Name:
+                </label>
+                
+                <input type="text" [formControl]="name" class="form-control" placeholder="Please enter your name">
+            </div>
+            
+            <div class="mb-2">
+                <label for="" class="form-label text-primary">
+                    Email:
+                </label>
+                
+                <input type="email" [formControl]="email" class="form-control" placeholder="Please enter your email">
+            </div>
+
+            <button class="btn btn-primary mt-2">
+                Send
+            </button>
+        </form>
+    </div>
+</div>
+
+<p>Name Value: {{name.value}}</p>
+<br>
+<p>Email Value: {{email.value}}</p>
