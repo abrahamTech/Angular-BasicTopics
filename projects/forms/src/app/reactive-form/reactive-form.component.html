@@ -1,14 +1,14 @@
 <div class="card" style="background-color: #222;">
     <div class="card-body">
-        <form>
+        <form [formGroup]="formUser" (ngSubmit)="processInfo()" #formContact="ngForm">
             <div class="mb-2">
                 <label for="" class="form-label text-info">
                     Name:
                 </label>
                 
-                <input type="text" [formControl]="name" class="form-control" placeholder="Please enter your name">
+                <input type="text" formControlName="name" class="form-control" placeholder="Please enter your name">
 
-                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                <div class="alert alert-danger mt-2" [hidden]="nameGetter.valid || nameGetter.pristine">
                     Name is mandatory
                 </div>
             </div>
@@ -18,29 +18,41 @@
                     Email:
                 </label>
                 
-                <input type="email" [formControl]="email" class="form-control" placeholder="Please enter your email">
+                <input type="email" formControlName="email" class="form-control" placeholder="Please enter your email">
 
-                <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+                <div class="alert alert-danger mt-2" [hidden]="formUser.get('email')?.valid || emailGetter?.pristine">
                     <!-- With the ?. We check in the array (email.errors) if exist an index named like this or not ['example'] -->
-                    <span *ngIf="email.errors?.['required']">
+                    <span *ngIf="formUser.get('email')?.errors?.['required']">
                         Email is mandatory
                     </span>
                     
-                    <span *ngIf="email.errors?.['email']">
+                    <span *ngIf="emailGetter?.errors?.['email']">
                         Invalid email
                     </span>
                 </div>
             </div>
 
-            <button class="btn btn-primary mt-2">
+            <button class="btn btn-primary mt-2" [disabled]="formUser.invalid">
                 Send
             </button>
         </form>
     </div>
 </div>
 
+<!-- //Show Inputs Info before use FormGroup
 <p>Name Value: {{name.value}}</p>
 <br>
 <p>Email Value: {{email.value}}</p>
 <br>
-<p>Email Validations: {{email.errors | json}}</p>
+<p>Email Validations: {{email.errors | json}}</p> -->
+
+<br>
+<p>Form User Values: {{formUser.value | json }}</p>
+<br>
+<p>Form user name: {{formUser.get("name")?.value}}</p>
+<br>
+<p>Form user email: {{formUser.get("email")?.value}}</p>
+
+<br><br>
+<p>Example: Instead "name.valid", is "formUser.get("name")?.valid"</p>
+<p>Example: Instead "name.value", is "nameGetter?.value"</p>
