@@ -6,6 +6,7 @@ import { ContadorComponent } from './contador/contador.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { TemplateVariablesComponent } from './template-variables/template-variables.component';
 import { LoopsComponent } from './loops/loops.component';
+import { ChildrenComponent } from './children/children.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { LoopsComponent } from './loops/loops.component';
     ContadorComponent,
     ButtonsComponent,
     TemplateVariablesComponent,
-    LoopsComponent
+    LoopsComponent,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule

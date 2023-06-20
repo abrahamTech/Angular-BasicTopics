@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basic-concepts';
+
+  dataFromTypescriptVar = "Hello from File app.component TYPE SCRIPT {{ }}";
+  dataFromTypescriptVar2 = "Hello from File app.component TYPE SCRIPT 2 [ ]";
+
 }
