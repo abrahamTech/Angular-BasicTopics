@@ -8,6 +8,8 @@ import { TemplateVariablesComponent } from './template-variables/template-variab
 import { LoopsComponent } from './loops/loops.component';
 import { ChildrenComponent } from './children/children.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { ChildrenComponent } from './children/children.component';
     ChildrenComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

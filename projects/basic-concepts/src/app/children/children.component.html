@@ -7,5 +7,9 @@
     <p>{{dataFromTypescript}}</p>
     <p>{{dataFromTypescript2}}</p>
 
-    <h6>{{dataFromInput}}</h6>
+    <h2>Children Component</h2>
+    <!-- To work with [(ngModel)] add Forms Module in the file app.module.ts -->
+    <input type="text" class="form-control mb-3" [(ngModel)]="dataFromInput">
+
+    <h6>Info from CHILDREN Input: {{dataFromInput}}</h6>
 </div>

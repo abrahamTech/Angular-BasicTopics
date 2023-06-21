@@ -13,4 +13,12 @@
 <app-loops></app-loops>
 
 <br><br>
-<app-children dataFromHtml="Hello from File app.component HTML" dataFromTypescript="{{dataFromTypescriptVar}}" [dataFromTypescript2]="dataFromTypescriptVar2"></app-children>
+<app-children dataFromHtml="Hello from File app.component HTML" dataFromTypescript="{{dataFromTypescriptVar}}" [dataFromTypescript2]="dataFromTypescriptVar2" [dataFromInput]="dataFromInput"></app-children>
+<br>
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h2 class="mb-2">Parent Component</h2>
+
+    <input type="text" class="form-control w-50 mb-3" [(ngModel)]="dataFromInput">
+    <h6>Info from PARENT Input: {{dataFromInput}}</h6>
+</div>
+<br>

@@ -11,4 +11,5 @@ export class AppComponent {
   dataFromTypescriptVar = "Hello from File app.component TYPE SCRIPT {{ }}";
   dataFromTypescriptVar2 = "Hello from File app.component TYPE SCRIPT 2 [ ]";
 
+  dataFromInput = "";
 }
