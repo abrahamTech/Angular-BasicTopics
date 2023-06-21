@@ -13,7 +13,9 @@
 <app-loops></app-loops>
 
 <br><br>
-<app-children dataFromHtml="Hello from File app.component HTML" dataFromTypescript="{{dataFromTypescriptVar}}" [dataFromTypescript2]="dataFromTypescriptVar2" [dataFromInput]="dataFromInput"></app-children>
+<app-children dataFromHtml="Hello from File app.component HTML" dataFromTypescript="{{dataFromTypescriptVar}}" [dataFromTypescript2]="dataFromTypescriptVar2" [dataFromInput]="dataFromInput" (dataFromInputChange)="dataFromInput = $event"></app-children>
+<!-- For listen the Event dataFromInputChange is the same the following codes: 
+    [(dataFromInput)]="dataFromInput" == [dataFromInput]="dataFromInput" (dataFromInputChange)="dataFromInput = $event" -->
 <br>
 <div class="d-flex flex-column justify-content-center align-items-center">
     <h2 class="mb-2">Parent Component</h2>
