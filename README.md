@@ -62,11 +62,27 @@ ng generate application application-name
 Ex: ng generate application forms
 
 # Run Application (Next 3)
-ng serve application-name -o
-Ex: ng serve forms -o
-
+```bash
+ng serve application-name -o 
+```
+Example: 
+<<ng serve forms -o>>
 
 # Template Forms vs REactive Forms
 
 T - Input from HTML File -> required
 R - Variable from TS File -> ("", Validators.required)
+
+## Service Generation
+```bash
+ng generate service service-name
+```
+Example:
+>>ng g s messages
+
+* Multiproject
+```bash
+ng generate sservice service-name --project=project-name
+```
+Example:
+>>ng g s messages --project=basic-concepts

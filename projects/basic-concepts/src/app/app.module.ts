@@ -9,6 +9,8 @@ import { LoopsComponent } from './loops/loops.component';
 import { ChildrenComponent } from './children/children.component';
 
 import { FormsModule } from '@angular/forms';
+import { AddMessagesComponent } from './add-messages/add-messages.component';
+import { ListMessagesComponent } from './list-messages/list-messages.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     ButtonsComponent,
     TemplateVariablesComponent,
     LoopsComponent,
-    ChildrenComponent
+    ChildrenComponent,
+    AddMessagesComponent,
+    ListMessagesComponent
   ],
   imports: [
     BrowserModule,
