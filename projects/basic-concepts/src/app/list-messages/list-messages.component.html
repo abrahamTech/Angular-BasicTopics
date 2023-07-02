@@ -1,1 +1,6 @@
-<p>list-messages works!</p>
+<h5>Messages List</h5>
+<ul>
+    <li *ngFor="let message of messagesService.messagesServ">
+        {{message}}
+    </li>
+</ul>
