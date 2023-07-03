@@ -74,14 +74,14 @@ ng generate component component-name --project=application-name
 ```bash
 ng new workspace-name --create-application=false
 ```
->>Ex: 
+>>Ex:  
 `ng new angular-basic-topics`
 
 ## Generate Applications (Then 2)
 ```bash
 ng generate application application-name
 ```
->>Ex:
+>>Ex:  
 `ng generate application basic-concepts`
 `ng generate application forms`
 `ng generate application routing`
@@ -90,7 +90,7 @@ ng generate application application-name
 ```bash
 ng serve application-name -o 
 ```
->>Ex: 
+>>Ex:  
 `ng serve forms -o`
 
 
@@ -98,12 +98,12 @@ ng serve application-name -o
 ```bash
 ng generate service service-name
 ```
-Example:
->>ng g s messages
+>>Ex:  
+`ng g s messages`
 
 * Multiproject
 ```bash
 ng generate service service-name --project=project-name
 ```
-Example:
->>ng g s messages --project=basic-concepts
+>>Ex:\
+`ng g s messages --project=basic-concepts`
