@@ -29,49 +29,70 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Bootstrap 5 Styles
 Write the next line code to the html file (index.html)
+```bash
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+```
 
+# Forms
 
-# Template Forms
+## Template Forms vs Reactive Forms
+
+T - Input from HTML File -> `required`
+R - Variable from TS File -> `("", Validators.required)`
+
+### Template Forms
 Best when the forms are small
 All validations will go in the same template
 
-# Reactive Forms
+### Reactive Forms
 Validations will go in the Typescript file
 
-
-
 # Run Aplication and open in explorer
+```bash
 ng serve -o
+```
 
 # Generate Component
+```bash
 ng generate component component_name
-Ex: ng g c template-form
+```
+>>Ex: 
+`ng g c template-form`
 
+### Multiproject
+```bash
 ng generate component component-name --project=application-name
-Ex: ng g c template-form --project=forms
+```
+>>Ex: 
+`ng g c template-form --project=forms`
+`ng g c home --project=routing`
 
 
+# How this project was initialize
 
 ## Generate File (First 1)
+```bash
 ng new workspace-name --create-application=false
-Ex: ng new angular-basic-topics
+```
+>>Ex: 
+`ng new angular-basic-topics`
 
 ## Generate Applications (Then 2)
+```bash
 ng generate application application-name
-Ex: ng generate application forms
+```
+>>Ex:
+`ng generate application basic-concepts`
+`ng generate application forms`
+`ng generate application routing`
 
 # Run Application (Next 3)
 ```bash
 ng serve application-name -o 
 ```
-Example: 
-<<ng serve forms -o>>
+>>Ex: 
+`ng serve forms -o`
 
-# Template Forms vs REactive Forms
-
-T - Input from HTML File -> required
-R - Variable from TS File -> ("", Validators.required)
 
 ## Service Generation
 ```bash
@@ -82,7 +103,7 @@ Example:
 
 * Multiproject
 ```bash
-ng generate sservice service-name --project=project-name
+ng generate service service-name --project=project-name
 ```
 Example:
 >>ng g s messages --project=basic-concepts
