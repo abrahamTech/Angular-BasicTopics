@@ -10,6 +10,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 //Routing
 import { RouterModule, Routes } from '@angular/router';
 
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
+
 //Home
 //Contact
 //About
@@ -19,6 +22,14 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent
+  },
+  {
+    path: "courses",
+    component: CoursesComponent
+  },
+  {
+    path: "courses/:course",
+    component: CoursesDetailComponent
   },
   {
     path: "contact",
@@ -45,7 +56,9 @@ const routes: Routes = [
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CoursesComponent,
+    CoursesDetailComponent
   ],
   imports: [
     BrowserModule,
