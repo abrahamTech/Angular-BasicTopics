@@ -1,3 +1,22 @@
 <h1>Topic 1: Routing</h1>
 
+<nav>
+  <ul>
+    <!-- Important! NO href!! <li><a href=""></a></li> -->
+    <!-- routerLinkActive gives a Class when you are in the selected route -->
+    <li>
+      <a routerLink="home" routerLinkActive="active">Home</a>
+    </li>
+    <li>
+      <a routerLink="contact" routerLinkActive="active">Contact </a>
+    </li>
+    <li>
+      <a routerLink="about" routerLinkActive="active">About</a>
+    </li>
+    <li>
+        <a routerLink="courses" routerLinkActive="active">Courses</a>
+    </li>
+  </ul>
+</nav>
+
 <router-outlet></router-outlet>
