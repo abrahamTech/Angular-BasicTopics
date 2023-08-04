@@ -59,13 +59,27 @@ ng generate component component_name
 >>Ex: 
 `ng g c template-form`
 
-### Multiproject
+* Multiproject
 ```bash
 ng generate component component-name --project=application-name
 ```
 >>Ex: 
 `ng g c template-form --project=forms`
 `ng g c home --project=routing`
+
+# Generate Module
+```bash
+ng generate module module_name
+```
+>>Ex: 
+`ng g m app-routing`
+
+* Multiproject
+```bash
+ng generate module module-name --project=application-name
+```
+>>Ex: 
+`ng g m app-routing --project=modules`
 
 
 # How this project was initialize
@@ -85,8 +99,9 @@ ng generate application application-name
 `ng generate application basic-concepts`
 `ng generate application forms`
 `ng generate application routing`
+`ng generate application modules`
 
-# Run Application (Next 3)
+## Run Application (Next 3)
 ```bash
 ng serve application-name -o 
 ```
@@ -94,7 +109,7 @@ ng serve application-name -o
 `ng serve forms -o`
 
 
-## Service Generation
+# Service Generation
 ```bash
 ng generate service service-name
 ```
