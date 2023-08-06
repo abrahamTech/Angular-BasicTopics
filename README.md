@@ -67,6 +67,12 @@ ng generate component component-name --project=application-name
 `ng g c template-form --project=forms`
 `ng g c home --project=routing`
 
+## **Tip** 
+
+* `folder/component-name` you can create a component in a specific `folder`, instead in the `app` folder.
+>>Ex:
+`ng g c courses/ListCourses --project=modules`
+
 
 # Service Generation
 ```bash
@@ -97,7 +103,15 @@ ng generate module module-name --project=application-name
 >>Ex: 
 `ng g m app-routing --project=modules`
 
-**Tip** with the flag `--flat` you ceate the module in the `app` folder, instead in another folder with the same name of the module.
+## **Tip** 
+
+* `--flat` you create the module in the `app` folder, instead in another folder with the same name as the module.
+>>Ex:
+`ng g m app-routing --flat --project=modules`
+
+* `--routing` you create the module in the folder with the same name as the module and with a routing module.
+>>Ex:
+`ng g m blog --routing --project=modules`
 
 
 # How this project was initialize
