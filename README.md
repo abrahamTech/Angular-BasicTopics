@@ -52,7 +52,7 @@ Validations will go in the Typescript file
 ng serve -o
 ```
 
-# Generate Component
+# Component Generation
 ```bash
 ng generate component component_name
 ```
@@ -67,7 +67,23 @@ ng generate component component-name --project=application-name
 `ng g c template-form --project=forms`
 `ng g c home --project=routing`
 
-# Generate Module
+
+# Service Generation
+```bash
+ng generate service service-name
+```
+>>Ex:  
+`ng g s messages`
+
+* Multiproject
+```bash
+ng generate service service-name --project=project-name
+```
+>>Ex:\
+`ng g s messages --project=basic-concepts`
+
+
+# Module Generation
 ```bash
 ng generate module module_name
 ```
@@ -80,6 +96,8 @@ ng generate module module-name --project=application-name
 ```
 >>Ex: 
 `ng g m app-routing --project=modules`
+
+**Tip** with the flag `--flat` you ceate the module in the `app` folder, instead in another folder with the same name of the module.
 
 
 # How this project was initialize
@@ -107,18 +125,3 @@ ng serve application-name -o
 ```
 >>Ex:  
 `ng serve forms -o`
-
-
-# Service Generation
-```bash
-ng generate service service-name
-```
->>Ex:  
-`ng g s messages`
-
-* Multiproject
-```bash
-ng generate service service-name --project=project-name
-```
->>Ex:\
-`ng g s messages --project=basic-concepts`
