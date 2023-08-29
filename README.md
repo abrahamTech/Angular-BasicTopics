@@ -72,7 +72,8 @@ ng generate component component-name --project=application-name
 * `folder/component-name` you can create a component in a specific `folder`, instead in the `app` folder.
 >>Ex:
 `ng g c courses/ListCourses --project=modules`
-
+`ng g c shared/navigation --project=modules`
+Note: I move the components to pages or components folder.
 
 # Service Generation
 ```bash
@@ -101,7 +102,7 @@ ng generate module module_name
 ng generate module module-name --project=application-name
 ```
 >>Ex: 
-`ng g m app-routing --project=modules`
+`ng g m shared --project=modules`
 
 ## **Tip** 
 
